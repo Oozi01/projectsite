@@ -1,0 +1,16 @@
+{% extends 'marvelbase.html' %}
+
+{% block title %}Delete Movie{% endblock %}
+
+{% block content %}
+<div class="card" style="width: 40rem;">
+    <div class="card-body"><br>
+    <h1>Are you sure you want to delete "{{movie.title}}" movie?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete Movie</button>
+    </form>
+    </div>
+    </div>
+    <a href="{% url 'marvel_movies' %}">Back to Movies</a>
+{% endblock %}

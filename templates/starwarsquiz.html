@@ -1,0 +1,284 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Star Wars {% endblock %}</title>
+</head>
+<body>
+<style type="text/css">
+
+body {
+    margin: 0;
+    background: rgb(20, 20, 20);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+
+header {
+    background: black;
+    border-bottom: 1px solid rgb(255, 232, 31);
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    height: 100px;
+    width: 200px;
+    float: left;
+    padding: 0px 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 35px;
+
+    position: relative;
+}
+
+nav a {
+    color: rgb(255, 232, 31);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: rgb(211, 179, 1);
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: rgb(255, 232, 31);
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+h1 {
+    color: rgb(255, 232, 31);
+    margin-left: 40%;
+    margin-top: 2%;
+}
+
+form {
+    margin-left: 20%;
+    color: white;
+}
+
+.labelsw {
+    color: rgb(255, 232, 31);
+}
+
+.labelswc {
+    color: rgb(255, 232, 31);
+}
+
+input[type="radio"]:checked + .labelswc {
+    color: #ffffff;
+    font-weight: bold;
+    color: green;
+}
+
+input[type="radio"]:checked + .labelsw {
+    color: #ffffff;
+    font-weight: bold;
+    color: red;
+}
+
+
+
+
+</style>
+
+{% block content %}
+<header>
+    <div class="container">
+        <img src="/media/Django-Project-Assets/Star_Wars_Logo.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/movies/swmovies/">Movies</a></li>
+                <li><a href="/movies/swseries/">Series</a></li>
+                <li><a href="/movies/swactors/">Actors</a></li>
+                <li><a href="/movies/starwarsquiz/">Quiz</a></li>
+                <li><a href="/starwars">Home</a></li>
+                <li><a href="/marvel">Marvel Site</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<h1>STAR WARS QUIZ</h1><br>
+
+<form>
+ <h3><p>1.The young Jedi Knight, Anakin Skywalker, becomes who in Star Wars?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Storm Trooper" id="question-1 option-1">
+        <label for="question-1 option-1" class="labelsw">Storm Trooper</label><br>
+        <input type="radio" name="age" value="Bounty Hunter" id="question-1 option-2">
+        <label for="question-1 option-2" class="labelsw">Bounty Hunter</label><br>
+        <input type="radio" name="age" value="Darth Vader" id="question-1 option-3">
+        <label for="question-1 option-3" class="labelswc">Darth Vader</label><br>
+        <input type="radio" name="age" value="Chancellor Palpatine" id="question-1 option-4">
+        <label for="question-1 option-4" class="labelsw">Chancellor Palpatine</label><br>
+    </h4>
+</form>
+<form>
+<h3><p>2.The planet Kashyyyk is home to who?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Chewbacca and the Wookiees" id="question-2 option-1">
+        <label for="question-2 option-1" class="labelswc">Chewbacca and the Wookiees</label><br>
+        <input type="radio" name="age" value="Jedi's" id="question-2 option-2">
+        <label for="question-2 option-2" class="labelsw">Jedi's</label><br>
+        <input type="radio" name="age" value="Does not exist" id="question-2 option-3">
+        <label for="question-2 option-3" class="labelsw">Does not exist</label><br>
+        <input type="radio" name="age" value="Sith" id="question-2 option-4">
+        <label for="question-2 option-4" class="labelsw">Sith</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>3.How many languages is C-3P0 fluent in?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Around 4 million" id="question-3 option-1">
+        <label for="question-3 option-1" class="labelsw">Around 4 million</label><br>
+        <input type="radio" name="age" value="Over 6 million" id="question-3 option-2">
+        <label for="question-3 option-2" class="labelswc">Over 6 million</label><br>
+        <input type="radio" name="age" value="Less than 1 million" id="question-3 option-3">
+        <label for="question-3 option-3" class="labelsw">Less than 1 million</label><br>
+        <input type="radio" name="age" value="Just 1" id="question-3 option-4">
+        <label for="question-3 option-4" class="labelsw">Just 1</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>4.What color is Mace Windu's lightsaber?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Green" id="question-4 option-1">
+        <label for="question-4 option-1" class="labelsw">Green</label><br>
+        <input type="radio" name="age" value="Red" id="question-4 option-2">
+        <label for="question-4 option-2" class="labelsw">Red</label><br>
+        <input type="radio" name="age" value="Blue" id="question-4 option-3">
+        <label for="question-4 option-3" class="labelsw">Blue</label><br>
+        <input type="radio" name="age" value="Purple" id="question-4 option-4">
+        <label for="question-4 option-4" class="labelswc">Purple</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>5.Who are the masters of the Dark Side that want to rule the galaxy?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Thanos" id="question-5 option-1">
+        <label for="question-5 option-1" class="labelsw">Thanos</label><br>
+        <input type="radio" name="age" value="The Sith" id="question-5 option-2">
+        <label for="question-5 option-2" class="labelswc">The Sith</label><br>
+        <input type="radio" name="age" value="Jedi's influenced by dark side" id="question-5 option-3">
+        <label for="question-5 option-3" class="labelsw">Jedi's influenced by dark side</label><br>
+        <input type="radio" name="age" value="Rebellious droids" id="question-5 option-4">
+        <label for="question-5 option-4" class="labelsw">Rebellious droids</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>6.What was the name of the planet that the clones were made on?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Dathomir" id="question-6 option-1">
+        <label for="question-6 option-1" class="labelsw">Dathomir</label><br>
+        <input type="radio" name="age" value="Kamino" id="question-6 option-2">
+        <label for="question-6 option-2" class="labelswc">Kamino</label><br>
+        <input type="radio" name="age" value="Muunilinst" id="question-6 option-3">
+        <label for="question-6 option-3" class="labelsw">Muunilinst</label><br>
+        <input type="radio" name="age" value="Genosis" id="question-6 option-4">
+        <label for="question-6 option-4" class="labelsw">Genosis</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>7.What species is Yoda?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Yehit" id="question-7 option-1">
+        <label for="question-7 option-1" class="labelsw">Yehit</label><br>
+        <input type="radio" name="age" value="Gemantu" id="question-7 option-2">
+        <label for="question-7 option-2" class="labelsw">Gemantu</label><br>
+        <input type="radio" name="age" value="It is unknown" id="question-7 option-3">
+        <label for="question-7 option-3" class="labelswc">It is unknown</label><br>
+        <input type="radio" name="age" value="Yordle" id="question-7 option-4">
+        <label for="question-7 option-4" class="labelsw">Yordle</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>8.What race of aquatic sentient beings does Jar-Jar Binks belong to?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="The Gungans" id="question-8 option-1">
+        <label for="question-8 option-1" class="labelswc">The Gungans</label><br>
+        <input type="radio" name="age" value="The Kertens" id="question-8 option-2">
+        <label for="question-8 option-2" class="labelsw">The Kertens</label><br>
+        <input type="radio" name="age" value="The Gongrens" id="question-8 option-3">
+        <label for="question-8 option-3" class="labelsw">The Gongrens</label><br>
+        <input type="radio" name="age" value="The Flothers" id="question-8 option-4">
+        <label for="question-8 option-4" class="labelsw">The Flothers</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>9.Who killed Han Solo?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="His son, Kylo Ren" id="question-9 option-1">
+        <label for="question-9 option-1" class="labelswc">His son, Kylo Ren</label><br>
+        <input type="radio" name="age" value="Darth Vader" id="question-9 option-2">
+        <label for="question-9 option-2" class="labelsw">Darth Vader</label><br>
+        <input type="radio" name="age" value="Chancellor Palpatine" id="question-9 option-3">
+        <label for="question-9 option-3" class="labelsw">Chancellor Palpatine</label><br>
+        <input type="radio" name="age" value="Rey" id="question-9 option-4">
+        <label for="question-9 option-4" class="labelsw">Rey</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>10.What can be considered the primary reason for Anakin falling to the dark side?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="He didn't like the way the Jedi ruled" id="question-10 option-1">
+        <label for="question-10 option-1" class="labelsw">He didn't like the way the Jedi ruled</label><br>
+        <input type="radio" name="age" value="He wanted to be the most powerful beeing in the whole universe" id="question-10 option-2">
+        <label for="question-10 option-2" class="labelsw">He wanted to be the most powerful beeing in the whole universe</label><br>
+        <input type="radio" name="age" value="He was angry with Yoda who didn't want him to become master" id="question-10 option-3">
+        <label for="question-10 option-3" class="labelsw">He was angry with Yoda who didn't want him to become master</label><br>
+        <input type="radio" name="age" value="He wanted to save Padmè from death during childbirth" id="question-10 option-4">
+        <label for="question-10 option-4" class="labelswc">He wanted to save Padmè from death during childbirth</label><br>
+    </h4>
+</form>
+
+
+
+
+</body>
+{% endblock %}
+</html>

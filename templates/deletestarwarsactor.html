@@ -1,0 +1,16 @@
+{% extends 'starwarsbase.html' %}
+
+{% block title %}Delete Actor{% endblock %}
+
+{% block content %}
+<div class="card" style="width: 40rem;">
+    <div class="card-body"><br>
+    <h1>Are you sure you want to delete "{{actor.name}} {{actor.lastname}}" movie?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete Actor</button>
+    </form>
+    </div>
+    </div>
+    <a href="{% url 'starwars_actors' %}">Back to Actors</a>
+{% endblock %}

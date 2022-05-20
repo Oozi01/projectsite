@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<style type="text/css">
+
+.starwarsbutton {
+    color: green;
+    margin-top: 200px;
+}
+
+.marvelbutton {
+    color: black;
+    margin-left: 95%;
+    margin-top: 0px;
+}
+
+.starwarstitle {
+    color: rgb(255, 232, 31);
+    font-size: 5rem;
+    margin-top: 0px;
+}
+
+.marveltitle {
+    color: white;
+    font-size: 5rem;
+    margin-top: 0px
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: red;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.buttonSW {
+    background-color: #111;
+    border-width: 0;
+}
+
+.underbuttonSW {
+    background-color: #111;
+    color: rgb(255, 232, 31);
+    border-width: 0;
+}
+
+.buttonM {
+    background-color: red;
+    border-width: 0;
+}
+
+.underbuttonM {
+    background-color: red;
+    color: white;
+    border-width: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(155, 149, 94);
+}
+
+</style>
+
+<head>
+    <title>Home site</title>
+</head>
+<body>
+    <div class="split left">
+      <div class="centered">
+        <button type='button' class="buttonSW"><h2 class="starwarstitle">STAR WARS</h2></button>
+        <button type="button" class="btn btn-primary underbuttonSW"><a href="/starwars" class="underbuttonSW">Star Wars Site</a><br></button>
+      </div>
+    </div>
+    <div class="split right">
+      <div class="centered">
+        <button type='button' class="buttonM"><h2 class="marveltitle">MARVEL</h2></button><br>
+        <button type="button" class="btn btn-primary underbuttonM"><a href="/marvel" class="underbuttonM">Marvel Site</a><br></button>
+      </div>
+    </div>
+</body>
+</html>
+
+
+
+<!-- <button type="button" class="btn btn-secondary marvelbutton"><a href="/marvel">Marvel Site</a><br></button>
+<button type="button" class="btn btn-secondary starwarsbutton"><a href="/starwars">Star Wars Site</a><br></button><br> -->

@@ -1,0 +1,19 @@
+{% extends 'starwarsbase.html' %}
+{% load bootstrap %}
+
+
+{% block title %}New Actor{% endblock %}
+
+{% block content %}    
+<div class="card" style="width: 32rem;">
+    <div class="card-bodycreatesw"><br>
+      <h5 class="card-titlecreatesw">Actor Info</h5>
+      <form method="post", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|bootstrap}}
+        <br><button type="submit" class="btn btn-success">Add Actor</button>
+    </form>
+    </div>
+</div>
+<a href="{% url 'starwars_actors' %}">Back to Actors</a>
+{% endblock %}

@@ -1,0 +1,286 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Marvel {% endblock %}</title>
+</head>
+<body>
+<style type="text/css">
+
+body {
+    margin: 0;
+    background: #222;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+header {
+    background: rgb(237, 29, 36);
+    border-bottom: 1px solid white;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    height: 100px;
+    width: 200px;
+    float: left;
+    padding: 0px 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 64px;
+    padding-top: 35px;
+
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: rgb(187, 185, 185);
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: white;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    margin-left: 42%;
+    margin-top: 2%;
+}
+
+h3 {
+    color: white
+}
+
+form {
+    margin-left: 20%;
+    color: white;
+}
+
+.labelm {
+    color: rgb(182, 182, 182);
+}
+
+.labelmc {
+    color: rgb(182, 182, 182);
+}
+
+input[type="radio"]:checked + .labelmc {
+    color: #ffffff;
+    font-weight: bold;
+    color: green;
+}
+
+input[type="radio"]:checked + .labelm {
+    color: #ffffff;
+    font-weight: bold;
+    color: red;
+}
+
+
+
+
+</style>
+
+{% block content %}
+<header>
+    <div class="container">
+        <img src="/media/Django-Project-Assets/Marvel_Logo.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/movies/mmovies/">Movies</a></li>
+                <li><a href="/movies/mseries/">Series</a></li>
+                <li><a href="/movies/mactors/">Actors</a></li>
+                <li><a href="/movies/marvelquiz/">Quiz</a></li>
+                <li><a href="/marvel">Home</a></li>
+                <li><a href="/starwars">Star Wars Site</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<h1>MARVEL QUIZ</h1><br>
+
+<form>
+ <h3><p>1.What is the name of Thor's hammer?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Mjolnir" id="question-1 option-1">
+        <label for="question-1 option-1" class="labelmc">Mjolnir</label><br>
+        <input type="radio" name="age" value="Yggdrasil" id="question-1 option-2">
+        <label for="question-1 option-2" class="labelm">Yggdrasil</label><br>
+        <input type="radio" name="age" value="Zeus" id="question-1 option-3">
+        <label for="question-1 option-3" class="labelm">Zeus</label><br>
+        <input type="radio" name="age" value="Purden" id="question-1 option-4">
+        <label for="question-1 option-4" class="labelm">Purden</label><br>
+    </h4>
+</form>
+<form>
+<h3><p>2.What is Captain America's shield made out of?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Obsidian" id="question-2 option-1">
+        <label for="question-2 option-1" class="labelm">Obsidian</label><br>
+        <input type="radio" name="age" value="Graphite" id="question-2 option-2">
+        <label for="question-2 option-2" class="labelm">Graphite</label><br>
+        <input type="radio" name="age" value="Vibraniumt" id="question-2 option-3">
+        <label for="question-2 option-3" class="labelmc">Vibranium</label><br>
+        <input type="radio" name="age" value="Diamond" id="question-2 option-4">
+        <label for="question-2 option-4" class="labelm">Diamond</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>3.Who is Peter Parker's best friend?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Ned" id="question-3 option-1">
+        <label for="question-3 option-1" class="labelmc">Ned</label><br>
+        <input type="radio" name="age" value="Happy" id="question-3 option-2">
+        <label for="question-3 option-2" class="labelm">Happy</label><br>
+        <input type="radio" name="age" value="Liz" id="question-3 option-3">
+        <label for="question-3 option-3" class="labelm">Liz</label><br>
+        <input type="radio" name="age" value="Flash" id="question-3 option-4">
+        <label for="question-3 option-4" class="labelm">Flash</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>4.Before becoming Vision, what is the name of Iron Man's A.I. butler?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Green" id="question-4 option-1">
+        <label for="question-4 option-1" class="labelmc">J.A.R.V.I.S</label><br>
+        <input type="radio" name="age" value="Red" id="question-4 option-2">
+        <label for="question-4 option-2" class="labelm">C.I.T.S.A.I</label><br>
+        <input type="radio" name="age" value="Blue" id="question-4 option-3">
+        <label for="question-4 option-3" class="labelm">T.S.A.I.</label><br>
+        <input type="radio" name="age" value="Purple" id="question-4 option-4">
+        <label for="question-4 option-4" class="labelm">I.M.A.I</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>5.What is the real name of the Black Panther?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="T'Challa" id="question-5 option-1">
+        <label for="question-5 option-1" class="labelmc">T'Challa</label><br>
+        <input type="radio" name="age" value="D'Khana" id="question-5 option-2">
+        <label for="question-5 option-2" class="labelm">D'Khana</label><br>
+        <input type="radio" name="age" value="T'Phan" id="question-5 option-3">
+        <label for="question-5 option-3" class="labelm">T'Phan</label><br>
+        <input type="radio" name="age" value="P'Gort" id="question-5 option-4">
+        <label for="question-5 option-4" class="labelm">P'Gort</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>6.What is the name of the microscopic universe Ant-Man travels to when he goes sub-atomic?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Qunatum World" id="question-6 option-1">
+        <label for="question-6 option-1" class="labelm">Qunatum World</label><br>
+        <input type="radio" name="age" value="Quantum Universe" id="question-6 option-2">
+        <label for="question-6 option-2" class="labelm">Quantum Universe</label><br>
+        <input type="radio" name="age" value="Quantum Realm" id="question-6 option-3">
+        <label for="question-6 option-3" class="labelmc">Quantum Realm</label><br>
+        <input type="radio" name="age" value="Quantum Multiverse" id="question-6 option-4">
+        <label for="question-6 option-4" class="labelm">Quantum Multiverse</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>7.How was the Gauntlet that Thanos was assembling called</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Gauntlet of Lives" id="question-7 option-1">
+        <label for="question-7 option-1" class="labelm">Gauntlet of Lives</label><br>
+        <input type="radio" name="age" value="Gauntlet of Destruction" id="question-7 option-2">
+        <label for="question-7 option-2" class="labelm">Gauntlet of Destruction</label><br>
+        <input type="radio" name="age" value="Universal Gauntlet" id="question-7 option-3">
+        <label for="question-7 option-3" class="labelm">Universal Gauntlet</label><br>
+        <input type="radio" name="age" value="Infinity Gauntlet" id="question-7 option-4">
+        <label for="question-7 option-4" class="labelmc">Infinity Gauntlet</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>8.How many stones were needed to assemble in Thanos's Gauntlet</p></h3>
+    <h4>
+        <input type="radio" name="age" value="5" id="question-8 option-1">
+        <label for="question-8 option-1" class="labelm">5</label><br>
+        <input type="radio" name="age" value="6" id="question-8 option-2">
+        <label for="question-8 option-2" class="labelmc">6</label><br>
+        <input type="radio" name="age" value="4" id="question-8 option-3">
+        <label for="question-8 option-3" class="labelm">4</label><br>
+        <input type="radio" name="age" value="7" id="question-8 option-4">
+        <label for="question-8 option-4" class="labelm">7</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>9.Who can lift Thor's hammer?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Iron-Man" id="question-9 option-1">
+        <label for="question-9 option-1" class="labelm">Iron-Man</label><br>
+        <input type="radio" name="age" value="Captain America" id="question-9 option-2">
+        <label for="question-9 option-2" class="labelmc">Captain America</label><br>
+        <input type="radio" name="age" value="Vision" id="question-9 option-3">
+        <label for="question-9 option-3" class="labelm">Vision</label><br>
+        <input type="radio" name="age" value="Spider-Man" id="question-9 option-4">
+        <label for="question-9 option-4" class="labelm">Spider-Man</label><br>
+    </h4>
+</form>
+<form>
+    <h3><p>10.What type of doctor is Stephen Strange?</p></h3>
+    <h4>
+        <input type="radio" name="age" value="Neurosurgeon" id="question-10 option-1">
+        <label for="question-10 option-1" class="labelmc">Neurosurgeon</label><br>
+        <input type="radio" name="age" value="Cardiologist" id="question-10 option-2">
+        <label for="question-10 option-2" class="labelm">Cardiologist</label><br>
+        <input type="radio" name="age" value="Endocrinologist" id="question-10 option-3">
+        <label for="question-10 option-3" class="labelm">Endocrinologist</label><br>
+        <input type="radio" name="age" value="Oncologist" id="question-10 option-4">
+        <label for="question-10 option-4" class="labelm">Oncologist</label><br>
+    </h4>
+</form>
+
+
+
+
+</body>
+{% endblock %}
+</html>

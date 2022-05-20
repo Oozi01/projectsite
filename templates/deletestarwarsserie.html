@@ -1,0 +1,16 @@
+{% extends 'starwarsbase.html' %}
+
+{% block title %}Delete Serie{% endblock %}
+
+{% block content %}
+<div class="card" style="width: 40rem;">
+    <div class="card-body"><br>
+    <h1>Are you sure you want to delete "{{serie.title}}" serie?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete Serie</button>
+    </form>
+    </div>
+    </div>
+    <a href="{% url 'starwars_series' %}">Back to Series</a>
+{% endblock %}

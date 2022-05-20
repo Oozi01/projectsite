@@ -1,0 +1,186 @@
+/* all pages */
+body {
+    padding: 2rem;
+    background-color: rgb(233, 233, 233)
+}
+
+a {
+    color: #121111;
+    text-decoration: none;
+}
+
+
+/* login pages */
+.login-card-title {
+    margin-left: 40%;
+    font-size: 1.5rem;
+}
+
+.login-card-body {
+    background-color: rgb(245, 245, 245);
+}
+
+.login-icon {
+    margin-left: 5px;
+    margin-top: 6px;
+}
+
+.login-button {
+    margin-left: 38%;
+}
+
+
+/* main pages */
+
+.movie-poster-card {
+    width: 150px;
+    float: left;
+}
+
+.movie-icon {
+    font-size: 1rem;
+}
+
+.description {
+    margin-left: 0px;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+
+.col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+    height: 30px;
+    display: flex;
+    font-size: 16px;
+    color: rgb(211, 179, 1);
+}
+
+.col-4 {
+    flex: 0 0 auto;
+    width: 25%;
+    height: 30px;
+    display: flex;
+    font-size: 16px;
+    color: #EDF2F4
+}
+
+.header {
+    background-color: black
+}
+
+.allmovies {
+    background-color: red;
+    color: white;
+}
+
+.swbutton {
+    color: rgb(211, 179, 1);
+}
+
+
+.swbutton:hover {
+    color: rgb(161, 138, 2);
+}
+
+.mbutton {
+    color: #EDF2F4;
+}
+
+.mbutton:hover {
+    color: #c0c4c5;
+}
+
+.card-bodysw {
+    background-color: #272727;
+    padding: 1rem;
+    border: 2px solid #000000;
+}
+
+.card-bodym {
+    background-color: #A4161A;
+    padding: 1rem;
+    border: 2px solid #720f13;
+}
+
+.card-titlem {
+    color: white;
+}
+
+.buttonm {
+    background-color: #630c0f;
+    border: none;
+}
+
+.buttonsw {
+    background-color: rgb(167, 142, 1);
+    border: none;
+}
+
+.card-titlesw {
+    color: #FFD60A;
+}
+
+.card-text_descriptionm {
+    color: rgb(168, 168, 168);
+}
+
+.card-text_descriptionmcharacterm {
+    color: rgb(204, 204, 204);
+    margin-left: 25%;
+    font-style: oblique;
+    font-size: large;
+}
+
+.card-text_descriptionmcharactersw {
+    color: rgb(179, 152, 2);
+    margin-left: 25%;
+    font-style: oblique;
+    font-size: large;
+}
+
+
+
+/* create new movie pages */
+.card-bodycreatem {
+    background-color: #A4161A;
+    color: rgb(168, 168, 168);
+    padding: 2rem;
+    border: 1rem solid #720f13;
+}
+
+
+.card-titlecreatem {
+    margin-left: 35%;
+}
+
+.card-text_descriptionsw {
+    color: #FFC300;
+}
+
+.card-bodycreatesw {
+    background-color: #272727;
+    padding: 2rem;
+    border: 1rem solid #0e0e0e;
+    color: #d8a604;
+}
+
+.card-titlecreatesw {
+    color: #d8a604;
+    margin-left: 35%;
+}

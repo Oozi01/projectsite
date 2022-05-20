@@ -1,0 +1,48 @@
+{% extends 'marvelbase.html' %}
+
+{% block title %}Marvel Actors{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+Hello <strong>{{user.username}}</strong>!<br>
+<a href="{% url 'logout' %}">Logout </a>
+{% else %}
+<a href="{% url 'login' %}">Login </a>
+{% endif %}
+
+
+
+<hr>
+<button type="button" class="btn btn-danger"><a href="/marvel" class="mbutton">Back to Main Site</a></button><br><br>
+<button type="submit" class="btn btn-danger"><a href="{% url 'new_marvel_actor' %}" class="mbutton">New Actor
+</a></button><br><br>
+{% if actors|length == 0 %}
+<h1>No actors</h1><br>
+{% else %}
+
+<h1>ACTORS</h1>
+
+{% for actor in actors %}
+<div class="card" style="width: 34rem;">
+    <div class="card-bodym">
+        <img src="/media/{{actor.photo}}" class="movie-poster-card">
+        <div class="row">
+            <div class="col-9">
+                <h5 class="card-titlem">{{actor}} ({{actor.age}})</h5>
+            </div>
+            </div>
+            <div class="row">
+                <p class="card-text_descriptionmcharacterm">{{actor.character}}</p>
+                <p class="card-text_descriptionm">{{actor.movies}}</p>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-danger buttonm"><a href="{% url 'edit_marvel_actor' actor.id %}"><i
+                        class="fa-solid fa-pen movie-icon col-4"></i></a></button>
+                    <button type="submit" class="btn btn-danger buttonm"><a href="{% url 'delete_marvel_actor' actor.id %}"><i
+                        class="fa-solid fa-trash-can movie-icon col-4"></i></a></button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

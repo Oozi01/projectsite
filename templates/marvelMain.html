@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Marvel {% endblock %}</title>
+</head>
+<body>
+<style type="text/css">
+
+body {
+    margin: 0;
+    background: rgb(10, 10, 10);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+header {
+    background: rgb(237, 29, 36);
+    border-bottom: 1px solid white;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    height: 100px;
+    width: 200px;
+    float: left;
+    padding: 0px 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 64px;
+    padding-top: 35px;
+
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: rgb(187, 185, 185);
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: white;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.mainimgm {
+    width: 900px;
+    height: 100%;
+    margin-left: 22%;
+    margin-top: 6%;
+}
+
+
+
+</style>
+
+{% block content %}
+<header>
+    <div class="container">
+        <img src="/media/Django-Project-Assets/Marvel_Logo.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/movies/mmovies/">Movies</a></li>
+                <li><a href="/movies/mseries/">Series</a></li>
+                <li><a href="/movies/mactors/">Actors</a></li>
+                <li><a href="/movies/marvelquiz/">Quiz</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="/starwars">Star Wars Site</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <img src="/media/Django-Project-Assets/Marvel_saga_main_89zfpje.jpg" class="mainimgm">
+</body>
+{% endblock %}
+</html>
+
